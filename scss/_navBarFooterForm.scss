@@ -1,0 +1,67 @@
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos generales para cada pagina del sitio */
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+.carouselHeader {
+	h5 {
+		color: $fontColorPrincipal;
+		background-color: $bgColor2;
+		font-family: $fontSecundaria;
+		font-weight: 700;
+		font-size: 2rem;
+		margin-left: 50%;
+	}
+}
+#header {
+	nav {
+		background-color: $bgColor1;
+	}
+	a {
+		color: $fontColorPrincipal;
+		font-size: 1.5rem;
+		&:hover {
+			color: $fontColorSecundario;
+			text-shadow: 0px 0px 8px $shadowColor1;
+		}
+	}
+}
+h1 {
+	margin: 5% 10% 5% 10%;
+	color: $fontColorPrincipal;
+	background-color: $bgColor2;
+	font-family: $fontPrincipal;
+	text-transform: uppercase;
+	text-align: center;
+}
+.btn {
+	border-radius: 0%;
+	color: $fontColorSecundario;
+	border-color: $colorHoverBorder;
+	background-color: $bgColor3;
+	&:hover {
+		color: $fontColorPrincipal;
+		border-color: $colorHoverBorder;
+		background-color: $bgColor2;
+	}
+}
+#footer {
+	margin-top: 1%;
+	background-color:$bgColor1;
+	a {
+		&:hover {
+			.fa-brands {
+				color: $bgColor2;
+				text-shadow: 0px 0px 4px $shadowColor1;
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* cambio de color de los iconos de Font Awesome:
+/*------------------------------------------------------------------------------------------------------------------------------*/
+.fa-bars {
+	color: $bgColor3;
+}
+.fa-brands {
+	color: $bgColor3;
+}
