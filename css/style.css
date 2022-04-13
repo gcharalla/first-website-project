@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+.imgTech, #vdTech, .imgNosotros {
+  width: 100%;
+  border-style: double; }
+
 /*------------------------------------------------------------------------------------------------------------------------------*/
 /* Estilos generales para cada pagina del sitio */
 /*------------------------------------------------------------------------------------------------------------------------------*/
@@ -22,10 +26,10 @@
     text-shadow: 0px 0px 8px white; }
 
 h1 {
-  margin: 5% 10% 5% 10%;
   color: white;
   background-color: black;
   font-family: "Lato";
+  margin: 5% 10% 5% 10%;
   text-transform: uppercase;
   text-align: center; }
 
@@ -55,35 +59,69 @@ h1 {
 .fa-brands {
   color: white; }
 
-@media only screen and (min-width: 375px) {
-  #vistaIndexDesktop {
-    display: none; }
-  #vistaIndexMobile {
-    display: block; }
-    #vistaIndexMobile img[src="img/index/migracion_index.png"] {
-      width: 90%; }
-  #vistaServiciosDesktop {
-    display: none; }
-  #vistaServiciosMobile {
-    display: block; }
-    #vistaServiciosMobile li {
-      list-style: none;
-      padding-right: 12.5%; } }
+#vistaServiciosDesktop li {
+  list-style: none;
+  padding-right: 11%; }
+
+#vdTech {
+  border-style: none; }
+
+#sliderArtesanal {
+  height: 60vh;
+  animation-name: sliderPractica;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  animation-duration: 10s;
+  animation-timing-function: ease;
+  background-size: cover; }
+
+@keyframes sliderPractica {
+  0% {
+    background-image: url(../img/nosotros/img1.jpg); }
+  35% {
+    background-image: url(../img/nosotros/img2.jpg); }
+  75% {
+    background-image: url(../img/nosotros/img3.jpg); }
+  100% {
+    background-image: url(../img/nosotros/img4.jpg); } }
+
+.imgNosotros {
+  border-style: none; }
+
+#mapaMediano {
+  display: none; }
+
+.frmContacto {
+  padding-left: 5%; }
+
+.articuloBlog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap; }
+
+.tarjetaBlog {
+  margin-bottom: 5%;
+  width: 18rem; }
+  .tarjetaBlog h4 {
+    font-size: 1rem; }
 
 @media only screen and (min-width: 768px) {
-  #vistaIndexMobile {
-    display: none; }
-  #vistaIndexDesktop {
-    display: block; }
   .contenidoIndex {
     margin-top: 10%;
     margin-bottom: 10%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: center; }
-  #vistaServiciosMobile li {
-    padding-right: 5%; } }
+    flex-wrap: nowrap; }
+  .articuloBlog {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap; } }
 
 @media only screen and (min-width: 1024px) {
   .contenidoIndex {
@@ -94,14 +132,17 @@ h1 {
       padding-right: 10%; }
   p {
     padding-right: 10%; }
-  #vistaServiciosMobile {
-    display: none; }
-  #vistaServiciosDesktop {
-    display: block; }
-    #vistaServiciosDesktop li {
-      list-style: none;
-      padding-right: 11%; }
   .seccionesServicios div:hover {
     border: 3px solid black;
     transform: scale(1.1, 1.1);
-    box-shadow: 3px 3px gray; } }
+    box-shadow: 3px 3px gray; }
+  #mapaPequeno {
+    display: none; }
+  #mapaMediano {
+    display: block; }
+  .articuloBlog {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap; } }

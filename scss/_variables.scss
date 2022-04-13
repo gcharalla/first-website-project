@@ -5,12 +5,34 @@
 $shadowColor1:white; 
 $shadowColor2: gray;
 $colorHoverBorder: black;
-$bgColor1: rgb(5,19,97);
-$bgColor2: black;
-$bgColor3: white;
 $fontColorPrincipal: white;
 $fontColorSecundario: black;
+
+$bgColor:(
+	'uno': rgb(5,19,97),
+	'dos': black,
+	'tres': white,
+);
 
 //Font Family
 $fontPrincipal: 'Lato';
 $fontSecundaria: 'Roboto';
+
+%anchoBorde{
+	width: 100%;
+	border-style:double;
+}
+
+@mixin textoComun ($color, $bgcolor, $family) {
+	color:$color;
+	background-color: $bgcolor;
+	font-family: $family;
+	
+}
+@mixin dflexBlog ($direction, $align, $justify, $wrap){
+	display: flex;
+	flex-direction: $direction;
+	align-items: $align;
+	justify-content: $justify;
+	flex-wrap: $wrap;
+}
