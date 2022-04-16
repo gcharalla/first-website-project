@@ -40,13 +40,6 @@ h1 {
 		background-color: map-get($map: $bgColor, $key: 'dos');
 	}
 }
-a{
-	text-decoration: none;
-	color: $fontColorSecundario;
-	&:visited{
-		color:$fontColorSecundario;
-	}
-}
 #footer {
 	margin-top: 1%;
 	background-color: map-get($map: $bgColor, $key: 'uno');

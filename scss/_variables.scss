@@ -8,6 +8,7 @@ $colorHoverBorder: black;
 $fontColorPrincipal: white;
 $fontColorSecundario: black;
 
+//Colores de Fondo
 $bgColor:(
 	'uno': rgb(5,19,97),
 	'dos': black,
@@ -20,9 +21,13 @@ $fontSecundaria: 'Roboto';
 
 %anchoBorde{
 	width: 100%;
-	border-style:double;
+	border-style: double;
 }
 
+%lnkServiciosMobile{
+	color: $fontColorSecundario;
+	text-decoration: none;
+}
 @mixin textoComun ($color, $bgcolor, $family) {
 	color:$color;
 	background-color: $bgcolor;

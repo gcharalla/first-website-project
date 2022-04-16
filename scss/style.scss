@@ -1,28 +1,54 @@
 @import "_variables";
 @import "_navBarFooterForm";
 
+.contenidoIndex{
+	img [src="img/index/migracion_index.png"]{
+		width: 90%;
+	}
+}
 #vistaServiciosDesktop {
 	li {
 		list-style: none;
 		padding-right: 11%;
 	}
 }
-.imgTech{
-	@extend %anchoBorde;
+#lnkDetailStartUp{
+	@extend %lnkServiciosMobile;
+}
+#lnkDetailGrowBig{
+	@extend %lnkServiciosMobile;
+}
+#lnkDetailGoGeek{
+	@extend %lnkServiciosMobile;
 }
 #vdTech {
 	@extend %anchoBorde;
 	border-style: none;
 }
+.imgTech{
+	@extend %anchoBorde;
+}
 .imgNosotros{
 	@extend %anchoBorde;
 	border-style: none;
+}
+#mapaPequeno{
+	width: 100%;
 }
 #mapaMediano {
 	display: none;
 }
 .frmContacto {
 	padding-left: 5%;
+}
+.card{
+	height: 300px;
+}
+.card-body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
 }
 .articuloBlog {
 	@include dflexBlog (column, center, center, nowrap);
