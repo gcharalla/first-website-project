@@ -1,28 +1,57 @@
 @import "_variables";
-@import "_navBarFooterForm";
+@import "_comunes";
 
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos para la pagina index.html*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
+.carouselHeader {
+	p {
+		@include textoComun($fontColorPrincipal, map-get($map: $bgColor, $key: 'dos'),$fontSecundaria );
+		font-weight: 700;
+		font-size: 2rem;
+		margin-left: 25%;
+		padding-left: 9%;
+	}
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos para la pagina servicios.html*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
 #vistaServiciosDesktop {
 	li {
 		list-style: none;
 		padding-right: 11%;
 	}
 }
-#lnkDetailStartUp{
+#lnkDetailStartUp, #lnkDetailGrowBig, #lnkDetailGoGeek{
 	@extend %lnkServiciosMobile;
 }
-#lnkDetailGrowBig{
-	@extend %lnkServiciosMobile;
+#frmDominio {
+	border-style: solid;
+	margin: 0% 4% 4% 4%;
+	padding: 4% 0% 4% 0%;
+	box-shadow: 3px 3px $shadowColor2;
 }
-#lnkDetailGoGeek{
-	@extend %lnkServiciosMobile;
-}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos para la pagina tech.html*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
 #vdTech {
 	@extend %anchoBorde;
 	border-style: none;
 }
-.imgTech{
+.imgTech {
 	@extend %anchoBorde;
 }
+.cardTech {
+	margin: 10% 0% 10% 0%;
+	.contenidoTech {
+		padding-right: 5%;
+	}
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos para la pagina nosotros.html*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
 .imgNosotros{
 	@extend %anchoBorde;
 	border-style: none;
@@ -33,39 +62,105 @@
 #mapaMediano {
 	display: none;
 }
+.cardNosotros {
+	padding: 10% 5% 0% 5%;
+	margin-bottom: 10%; 
+}
 .frmContacto {
 	padding-left: 5%;
 }
-.card{
-	height: 300px;
-}
-.card-body{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-}
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos para la pagina blog.html */
+/*------------------------------------------------------------------------------------------------------------------------------*/
 .articuloBlog {
 	@include dflexBlog (column, center, center, nowrap);
+	.card {
+		height: 300px;
+		margin-bottom: 5%;
+		width: 18rem;
+		.card-body{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			.card-title {
+				font-size: 1rem;
+			}
+		}	
+	}
 }
-.tarjetaBlog {
-	margin-bottom: 5%;
-	width: 18rem;
-	h4 {
-		font-size: 1rem;
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos para la pagina 404.html */
+/*------------------------------------------------------------------------------------------------------------------------------*/
+.error404{
+	@include dflexBlog (row, center, center, nowrap);
+	text-align: center;
+	img{
+		@extend %anchoBorde;
+		border-style: none;
+	}
+	article{
+		padding: 10% 5% 10% 5%;
+		p:first-child{
+			font-size: 8rem;
+		}
+		:nth-child(3){
+			font-size: 2rem;
+			text-transform: uppercase;
+		}
+		a{
+			margin-right: 9%;
+		}
+	}
+}
+@media only screen and (max-width: 767px){
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos para la pagina index.html*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
+	.contenidoIndex{
+		margin: 10% 0% 30% 0%;
+		.imgIndex{
+			width: 100%;
+		}
+	}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos para la pagina servicios.html*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
+	.cardTech {
+		margin: 10% 0% 30% 0%;
+	}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos para la pagina 404.html*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
+	.error404{
+		@include dflexBlog (column, center, center, nowrap);
+		a{
+			margin-left: 10%;
+		}
 	}
 }
 @media only screen and (min-width: 768px) {
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos para la pagina index.html*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
 	.contenidoIndex {
 		margin-top: 10%;
 		margin-bottom: 10%;
 		@include dflexBlog (column, center, center, nowrap);
 	}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos para la pagina blog.html*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
 	.articuloBlog {
 		@include dflexBlog (row, flex-start, space-around, wrap);
 	}
 }
 @media only screen and (min-width: 1024px) {
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos para la pagina index.html*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
 	.contenidoIndex {
 		margin-top: 5%;
 		margin-bottom: 5%;
@@ -73,28 +168,55 @@
 		h2 {
 			padding-right: 10%;
 		}
+		p {
+			padding-right: 10%;
+		}
 	}
-	p {
-		padding-right: 10%;
-	}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos para la pagina servicios.html*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
 	.seccionesServicios {
 		div {
 			&:hover {
                 border: 3px solid $colorHoverBorder;
 				transform: scale(1.1, 1.1);
 				box-shadow: 3px 3px $shadowColor2;
+				transition: 200ms ease;
 			}
 		}
 	}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos para la pagina nosotros.html*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
 	#mapaPequeno {
 		display: none;
 	}
 	#mapaMediano {
 		display: block;
 	}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos para la pagina blog.html*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
 	.articuloBlog {
 		@include dflexBlog (row, flex-start, space-around, wrap);
+		.card {
+			&:hover {
+				border: 3px solid $colorHoverBorder;
+				transform: scale(1.1, 1.1);
+				box-shadow: 3px 3px $shadowColor2;
+				transition: 200ms ease;
+			}
+		}
 	}
 }
 
-
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Estilos para la pagina 404.html */
+/*------------------------------------------------------------------------------------------------------------------------------*/
+.error404{
+	article{
+		a{
+			margin-left: 8%;
+		}
+	}
+}

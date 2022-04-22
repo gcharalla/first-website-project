@@ -28,12 +28,14 @@ $fontSecundaria: 'Roboto';
 	color: $fontColorSecundario;
 	text-decoration: none;
 }
+
 @mixin textoComun ($color, $bgcolor, $family) {
 	color:$color;
 	background-color: $bgcolor;
 	font-family: $family;
 	
 }
+
 @mixin dflexBlog ($direction, $align, $justify, $wrap){
 	display: flex;
 	flex-direction: $direction;
