@@ -1,4 +1,4 @@
-# first-website-project
+# First Website Project
 My first website project for the Web Development course at CoderHouse
 ## Technologies
 A list of technologies used within the project:
